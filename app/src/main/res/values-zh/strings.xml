@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Things</string>
+
+    <string name="no_tasks_all">没有待办事项!</string>
+    <string name="no_tasks_active">没有未完成的待办事项!</string>
+    <string name="no_tasks_completed">没有已完成的待办事项!</string>
+    <string name="no_tasks_add">添加一个待办事项!</string>
+</resources>
