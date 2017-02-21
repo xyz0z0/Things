@@ -33,13 +33,9 @@ public interface TasksContract {
         TaskFilterType getFiltering();
 
         void setFiltering(TaskFilterType requestType);
-
-        int getFilterInt();
-
-        void setFilterInt(int filterInt);
     }
 
-    interface View extends BaseView<Presenter>{
+    interface View extends BaseView<Presenter> {
 
         void setLoadingIndicator(boolean active);
 

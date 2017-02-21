@@ -6,4 +6,27 @@
     <string name="no_tasks_active">You have no active TO-DOs!</string>
     <string name="no_tasks_completed">You have no completed TO-DOs!</string>
     <string name="no_tasks_add">Add a TO-DO item +</string>
+    <!--tasks act menu-->
+    <string name="menu_filter">Filter</string>
+    <string name="menu_clear">Clear completed</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_about">About</string>
+
+    <string name="task_to_delete">Delete this item?</string>
+    <string name="enter">Enter</string>
+    <string name="task_marked_complete">Complete a task</string>
+    <string name="task_marked_active">Active a task</string>
+    <string name="completed_tasks_cleared">Clear completed tasks</string>
+    <string name="loading_tasks_error">load tasks error</string>
+    <string name="nav_all">All</string>
+    <string name="nav_active">Active</string>
+    <string name="nav_completed">Completed</string>
+    <string name="successfully_saved_task_message">TO-DO saved</string>
+
+    <string name="title_hint">title</string>
+    <string name="description_hint">description</string>
+
+    <string name="empty_task_message">empty task</string>
+    <string name="add_task">add task</string>
+    <string name="edit_task">edit task</string>
 </resources>

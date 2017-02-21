@@ -213,4 +213,19 @@ public class TasksLocalDataSource implements TasksDataSource {
 
         db.close();
     }
+
+    @Override
+    public void updateTask(@NonNull Task task) {
+        SQLiteDatabase db = mDbHelper.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(TaskEntry.COLUMN_NAME_TITLE, task.getTitle());
+        values.put(TaskEntry.COLUMN_NAME_DESCRIPTION, task.getDescription());
+
+        String seletion = TaskEntry.COLUMN_NAME_ENTRY_ID + " LIKE ?";
+        String[] seletionArgs = {task.getId()};
+
+        db.update(TaskEntry.TABLE_NAME, values, seletion, seletionArgs);
+        db.close();
+    }
 }

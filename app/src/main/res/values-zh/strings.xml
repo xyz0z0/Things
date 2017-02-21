@@ -6,4 +6,28 @@
     <string name="no_tasks_active">没有未完成的待办事项!</string>
     <string name="no_tasks_completed">没有已完成的待办事项!</string>
     <string name="no_tasks_add">添加一个待办事项!</string>
+
+    <!--tasks act menu-->
+    <string name="menu_filter">过滤器</string>
+    <string name="menu_clear">删除已完成事项</string>
+    <string name="menu_refresh">刷新</string>
+    <string name="menu_about">关于</string>
+
+    <string name="task_to_delete">确定要删除这个待办项目吗?</string>
+    <string name="enter">确认</string>
+    <string name="task_marked_complete">完成一个待办项目</string>
+    <string name="task_marked_active">激活一个待办项目</string>
+    <string name="completed_tasks_cleared">成功删除已完成项目</string>
+    <string name="loading_tasks_error">加载待办项目列表错误</string>
+    <string name="nav_all">全部</string>
+    <string name="nav_active">未完成</string>
+    <string name="nav_completed">已完成</string>
+    <string name="successfully_saved_task_message">保存成功</string>
+
+    <string name="title_hint">标题</string>
+    <string name="description_hint">待办项目内容</string>
+
+    <string name="empty_task_message">待办项目不能为空</string>
+    <string name="add_task">新的待办项目</string>
+    <string name="edit_task">编辑待办项目</string>
 </resources>

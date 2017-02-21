@@ -34,6 +34,8 @@ public interface TasksDataSource {
 
     void deleteTask(@NonNull String taskId);
 
+    void updateTask(@NonNull Task task);
+
     interface LoadTasksCallback {
 
         void onTaskLoaded(List<Task> tasks);
