@@ -67,7 +67,6 @@ public class TasksFragment extends Fragment implements TasksContract.View {
     private TextView mTvNoTasks;
     private TextView mTvNoTasksAdd;
     private LinearLayout mLlTasksView;
-    private TextView mTvFilteringLabel;
     private ActionBar mActionBar;
 
     public TasksFragment() {
@@ -108,7 +107,6 @@ public class TasksFragment extends Fragment implements TasksContract.View {
 //        mRvTasks.addItemDecoration();TODO
         mRvTasks.setAdapter(mTasksAdapter);
 
-        mTvFilteringLabel = (TextView) root.findViewById(R.id.filteringLabel);
         mLlTasksView = (LinearLayout) root.findViewById(R.id.tasks);
 
         mViewNoTasks = root.findViewById(R.id.noTasks);
@@ -298,17 +296,17 @@ public class TasksFragment extends Fragment implements TasksContract.View {
 
     @Override
     public void showAllFilterLabel() {
-        mTvFilteringLabel.setText(getString(R.string.nav_all));
+//        mTvFilteringLabel.setText(getString(R.string.nav_all));
     }
 
     @Override
     public void showCompletedFilterLabel() {
-        mTvFilteringLabel.setText(getString(R.string.nav_completed));
+//        mTvFilteringLabel.setText(getString(R.string.nav_completed));
     }
 
     @Override
     public void showActiveFilterLabel() {
-        mTvFilteringLabel.setText(getString(R.string.nav_active));
+//        mTvFilteringLabel.setText(getString(R.string.nav_active));
     }
 
     @Override

@@ -164,7 +164,7 @@ public class TasksPresenter implements TasksContract.Presenter {
 
     @Override
     public void completeTask(Task completeTask) {
-        mTasksRepository.completeTask(completeTask.getId());
+        mTasksRepository.completeTask(completeTask);
         mTasksView.showTaskMarkedCompleted();
         loadTasks(false, false);
     }

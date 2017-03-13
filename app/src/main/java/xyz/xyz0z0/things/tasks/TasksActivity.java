@@ -27,11 +27,11 @@ public class TasksActivity extends AppCompatActivity {
         mActionBar = getSupportActionBar();
 
         // 初始化，此时tasksFragment为null
-        TasksFragment tasksFragment = (TasksFragment) getSupportFragmentManager().findFragmentById(R.id.tasksact_contentFrame);
+        TasksFragment tasksFragment = (TasksFragment) getSupportFragmentManager().findFragmentById(R.id.content);
         if (tasksFragment == null) {
             // 实例
             tasksFragment = TasksFragment.newInstance();
-            ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),tasksFragment,R.id.tasksact_contentFrame);
+            ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),tasksFragment,R.id.content);
         }
 
         mTasksPresenter = new TasksPresenter(
