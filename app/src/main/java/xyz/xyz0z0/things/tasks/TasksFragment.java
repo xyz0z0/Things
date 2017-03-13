@@ -207,7 +207,7 @@ public class TasksFragment extends Fragment implements TasksContract.View {
                 .setAction(R.string.enter, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+//TODO
                     }
                 }).show();
     }
