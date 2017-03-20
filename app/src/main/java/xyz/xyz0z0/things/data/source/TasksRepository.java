@@ -142,8 +142,7 @@ public class TasksRepository implements TasksDataSource {
     @Override
     public void deleteTask(@NonNull String taskId) {
         mTasksLocalDataSource.deleteTask(taskId);
-
-        mCachedTasks.remove(taskId);
+//        mCachedTasks.remove(taskId);
     }
 
     @Nullable

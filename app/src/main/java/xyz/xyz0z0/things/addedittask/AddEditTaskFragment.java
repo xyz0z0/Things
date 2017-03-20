@@ -1,6 +1,8 @@
 package xyz.xyz0z0.things.addedittask;
 
 import android.app.Activity;
+import android.appwidget.AppWidgetManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -65,6 +67,9 @@ public class AddEditTaskFragment extends Fragment implements AddEditTaskContract
                 } else {
                     mPresenter.updateTask(new Task(mEtTitle.getText().toString(), mEtDescription.getText().toString(), mEditedTaskId, false));
                 }
+                // 发送广播给AppWidget
+                Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
+                getActivity().sendBroadcast(intent);
             }
         });
 

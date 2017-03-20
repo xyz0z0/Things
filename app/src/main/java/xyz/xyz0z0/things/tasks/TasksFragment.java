@@ -1,5 +1,6 @@
 package xyz.xyz0z0.things.tasks;
 
+import android.appwidget.AppWidgetManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -183,6 +184,10 @@ public class TasksFragment extends Fragment implements TasksContract.View {
 
     @Override
     public void showTasks(List<Task> tasks) {
+        // 发送广播给AppWidget
+        Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
+        getActivity().sendBroadcast(intent);
+
         mTasksAdapter.replaceData(tasks);
         mLlTasksView.setVisibility(View.VISIBLE);
         mViewNoTasks.setVisibility(View.GONE);
@@ -202,12 +207,13 @@ public class TasksFragment extends Fragment implements TasksContract.View {
     }
 
     @Override
-    public void showTaskToDelete(Task task) {
+    public void showTaskToDelete(final Task task) {
         Snackbar.make(getView(), getString(R.string.task_to_delete), Snackbar.LENGTH_LONG)
                 .setAction(R.string.enter, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 //TODO
+                        mPresenter.deleteTask(task);
                     }
                 }).show();
     }
