@@ -12,7 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -30,6 +29,7 @@ import java.util.List;
 import xyz.xyz0z0.things.R;
 import xyz.xyz0z0.things.addedittask.AddEditTaskActivity;
 import xyz.xyz0z0.things.data.Task;
+import xyz.xyz0z0.things.util.DividerItemDecoration;
 
 import static xyz.xyz0z0.things.addedittask.AddEditTaskFragment.ARGUMENT_EDIT_TASK_ID;
 
@@ -105,7 +105,7 @@ public class TasksFragment extends Fragment implements TasksContract.View {
         mRvTasks = (RecyclerView) root.findViewById(R.id.tasks_list);
         mRvTasks.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRvTasks.setHasFixedSize(true);
-//        mRvTasks.addItemDecoration();TODO
+        mRvTasks.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL_LIST));
         mRvTasks.setAdapter(mTasksAdapter);
 
         mLlTasksView = (LinearLayout) root.findViewById(R.id.tasks);
